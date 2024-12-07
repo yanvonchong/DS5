@@ -6,10 +6,10 @@
 
 ## 🚀 Sobre mí
 
-- 👨‍💻 **Profesión**: [Por el momento estoy trabajando en el area de administracion de empresas]
-- 🎯 **Áreas de interés**: [Me gusta el area de programacion orientada a videojuegos]  
-- 🌱 **Aprendiendo actualmente**: [Trabaje en diferentes proyectos como se pueden ver en mi repositorio usando C#, Javascripts, SQL Server]  
-- 🌐 **Idiomas**: [ Español (Nativo), Inglés (Intermedio)]  
+- 👨‍💻 **Profesión**: Por el momento estoy trabajando en el area de administracion de empresas
+- 🎯 **Áreas de interés**: Me gusta el area de programacion orientada a videojuegos
+- 🌱 **Aprendiendo actualmente**: Trabaje en diferentes proyectos como se pueden ver en mi repositorio usando C#, Javascripts, SQL Server 
+- 🌐 **Idiomas**: Español (Nativo), Inglés (Intermedio) 
 
 ---
 
