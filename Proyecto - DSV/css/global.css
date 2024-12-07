@@ -1,0 +1,182 @@
+/* Reset global */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    height: 100vh;
+    display: flex;
+    overflow: hidden;
+}
+
+/* Contenedor principal */
+#app {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+}
+
+/* Menú lateral */
+/* Estilos del menú lateral */
+/* Menú lateral */
+#side-menu {
+    width: 250px;
+    background-color: #f5a623;
+    padding: 20px 0; /* Ajustar padding */
+    color: white;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centrar los elementos verticalmente */
+    align-items: center; /* Centrar los elementos horizontalmente */
+    height: 100vh; /* Asegurarse de que ocupe toda la altura de la ventana */
+}
+
+/* Lista del menú */
+#side-menu ul {
+    list-style-type: none;
+    width: 100%;
+    padding: 0; /* Eliminar padding adicional */
+    margin: 0;
+}
+
+/* Elementos del menú */
+#side-menu li {
+    margin: 10px 0; /* Espacio uniforme entre los elementos */
+    width: 100%;
+    display: flex;
+    justify-content: center; /* Centrar horizontalmente */
+}
+
+/* Enlaces del menú */
+.nav-link {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 15px 20px; /* Ajustar tamaño para mayor legibilidad */
+    display: inline-block;
+    text-align: center;
+    width: 80%; /* Ajustar el ancho */
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.2s;
+    text-transform: uppercase; /* Texto en mayúsculas */
+    font-size: 16px;
+    letter-spacing: 0.5px; /* Espaciado entre letras */
+}
+
+.nav-link:hover,
+.nav-link.active {
+    background-color: #d4881f;
+    transform: scale(1.02); /* Efecto de zoom */
+}
+
+/* Ajuste para un centrado perfecto */
+#side-menu ul {
+    flex-grow: 1; /* Hacer que los elementos se expandan en el espacio disponible */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centrar los elementos verticalmente */
+}
+
+/* Ajustes para el contenedor principal */
+#main-content {
+    flex: 1; /* Permite que el contenido principal crezca para ocupar todo el espacio disponible */
+    display: flex; /* Para que los hijos puedan usar flexbox */
+    justify-content: center; /* Centrar contenido horizontalmente */
+    align-items: center; /* Centrar contenido verticalmente */
+    background-color: #f9f9f9;
+    height: 100%; /* Aseguramos que ocupe toda la altura */
+    width: 100%; /* Ocupa el ancho disponible */
+    overflow: hidden; /* Evitar barras de desplazamiento innecesarias */
+}
+
+/* Ocultar el menú lateral en la vista de inicio de sesión */
+#side-menu.hidden {
+    display: none;
+}
+
+/* Otros estilos globales */
+body {
+    font-family: Arial, sans-serif;
+    height: 100vh;
+    display: flex;
+    overflow: hidden;
+}
+
+#navbar {
+    width: 100%;
+    height: 60px;
+    background-color: #f5a623;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    color: white;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+}
+
+#navbar-left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#search-bar {
+    flex: 1; /* Permitir que el cuadro de texto se expanda */
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+#search-btn {
+    background-color: #4caf50; /* Verde llamativo */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#search-btn:hover {
+    background-color: #388e3c; /* Verde más oscuro */
+    transform: scale(1.05);
+}
+
+#navbar-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+#user-info {
+    font-size: 16px;
+}
+
+#logout-btn {
+    padding: 8px 16px;
+    border: none;
+    background-color: #d4881f;
+    color: white;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#logout-btn:hover {
+    background-color: #bf751a;
+}
+
+.hidden {
+    display: none !important;
+}

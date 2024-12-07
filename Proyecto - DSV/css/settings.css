@@ -1,0 +1,89 @@
+#settings-container {
+    height: 895px; /* Tamaño fijo */
+    width: 1660px; /* Tamaño fijo */
+    margin: 0 auto; /* Centrado horizontal */
+    padding: 20px;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column; /* Para apilar los elementos verticalmente */
+    justify-content: center; /* Centrar verticalmente */
+    align-items: center; /* Centrar horizontalmente */
+    text-align: center;
+    transition: background-color 0.3s, color 0.3s; /* Transición suave */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Modo claro */
+.settings-light {
+    background-color: #f9f9f9;
+    color: #000000;
+}
+
+/* Modo oscuro */
+.settings-dark {
+    background-color: #1e1e1e;
+    color: #ffffff;
+}
+
+/* Elementos dentro del contenedor */
+.setting-item {
+    display: flex;
+    justify-content: space-between; /* Distribuye el texto y el checkbox uniformemente */
+    align-items: center;
+    margin: 20px 0;
+    width: 50%; /* Ajustar el ancho para que los elementos sean consistentes */
+    font-size: 18px; /* Incrementar el tamaño de la fuente */
+}
+
+/* Estilo personalizado para checkboxes */
+.setting-item input[type="checkbox"] {
+    width: 30px; /* Ancho del checkbox */
+    height: 30px; /* Alto del checkbox */
+    cursor: pointer;
+    accent-color: #f5a623; /* Color del checkbox para navegadores compatibles */
+}
+
+/* Estilos del botón */
+#save-settings,
+#reset-settings {
+    background-color: #f5a623;
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: 20px;
+    transition: background-color 0.3s;
+}
+
+#save-settings:hover,
+#reset-settings:hover {
+    background-color: #d4881f;
+}
+
+/* Dropdown de idioma */
+#language-select {
+    font-size: 16px;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    background-color: inherit; /* Hereda el fondo del contenedor */
+    color: inherit; /* Hereda el color del texto */
+    outline: none; /* Quita el borde azul al seleccionar */
+    transition: background-color 0.3s, color 0.3s, border 0.3s;
+}
+
+.settings-dark #language-select {
+    border: 1px solid #ffffff; /* Borde blanco para modo oscuro */
+}
+
+.settings-light #language-select {
+    border: 1px solid #000000; /* Borde negro para modo claro */
+}
+
+#language-select option {
+    background-color: #ffffff; /* Fondo blanco para las opciones desplegadas */
+    color: #000000; /* Texto negro para opciones desplegadas */
+}

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Texto Inverso</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        input {
+            padding: 10px;
+            font-size: 16px;
+            width: 200px;
+        }
+        span {
+            display: block;
+            margin-top: 10px;
+            font-size: 24px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Escribe algo:</h1>
+    <input type="text" id="inputTexto" placeholder="ESCRIBE ALGO PA VE...">
+    <span id="textoInvertido"></span>
+    <script src="jaja.js"></script>
+    
+
+</body>
+<script>
+    const inputTexto = document.getElementById('inputTexto');
+    const textoInvertido = document.getElementById('textoInvertido');
+
+    inputTexto.addEventListener('input', () => {
+        const textoActual = inputTexto.value;
+        const textoReverso = textoActual.split('').reverse().join('');
+        textoInvertido.textContent = textoReverso;
+    });
+</script>
+</html>

@@ -1,0 +1,83 @@
+/* Contenedor principal del login y registro */
+#login-container, #register-container {
+    width: 100%;
+    max-width: 500px; /* Incrementar ancho máximo */
+    margin: 50px auto;
+    padding: 40px; /* Aumentar padding */
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    font-family: Arial, sans-serif;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Encabezado principal */
+#login-container h1, #register-container h1 {
+    font-size: 32px; /* Hacer el título más prominente */
+    color: #333;
+    margin-bottom: 30px; /* Separar del formulario */
+    font-weight: bold;
+}
+
+/* Formularios */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Espacio entre los campos */
+}
+
+/* Campos de texto */
+input {
+    width: 100%;
+    padding: 15px; /* Aumentar tamaño del padding */
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    color: #555;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Estilo de los campos al enfocar */
+input:focus {
+    border-color: #f5a623;
+    outline: none;
+    box-shadow: 0 0 8px rgba(245, 166, 35, 0.4);
+}
+
+/* Botones */
+button {
+    background-color: #f5a623;
+    color: white;
+    border: none;
+    padding: 15px; /* Aumentar tamaño del padding */
+    border-radius: 8px;
+    font-size: 18px; /* Aumentar tamaño del texto */
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-top: 10px; /* Añadir espacio superior */
+}
+
+button:hover {
+    background-color: #d4881f;
+    transform: scale(1.05);
+}
+
+/* Enlaces */
+a {
+    color: #f5a623;
+    text-decoration: none;
+    font-size: 16px;
+    margin-top: 10px; /* Añadir espacio superior */
+    display: inline-block; /* Asegurar que el enlace sea un bloque separable */
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Ocultar contenedor de registro por defecto */
+.hidden {
+    display: none;
+}

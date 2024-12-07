@@ -1,0 +1,188 @@
+/* Ajustar el contenedor del calendario para ocupar el lado derecho */
+#calendar {
+    background-color: #fff; /* Fondo naranja */
+    color: black;
+    font-family: Arial, sans-serif; /* Cambiar la fuente */
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 100%; /* Expandir para abarcar todo el lado derecho */
+    height: 100%; /* Ajustar la altura al 100% */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-y: auto;
+}
+
+/* Contenedor del calendario */
+#calendar-container {
+    width: 100%;
+    max-width: 900px; /* Limitar el ancho máximo */
+    margin: 0 auto;
+    text-align: center;
+    background-color: #fff;
+    color: #000; /* Texto en negro para mayor contraste */
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+/* Cabecera del calendario */
+.calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+#calendar h1 {
+    text-align: center;
+    font-size: 36px; /* Incrementa el tamaño del texto */
+    margin-bottom: 20px;
+    font-weight: bold; /* Asegura que sea negrita */
+    color: #000; /* Ajusta el color si es necesario */
+}
+
+.calendar-btn {
+    background-color: #d4881f;
+    border: none;
+    color: white;
+    font-size: 16px;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.calendar-btn:hover {
+    background-color: #bf751a;
+}
+
+/* Tabla del calendario */
+#calendar-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#calendar-table th,
+#calendar-table td {
+    width: 14%;
+    height: 80px;
+    text-align: center;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    font-size: 14px;
+    font-weight: bold;
+    color: #333; /* Ajustar color para mejor visibilidad */
+}
+
+#calendar-table td:hover {
+    background-color: rgba(245, 166, 35, 0.3);
+    cursor: pointer;
+}
+
+/* Día actual */
+#calendar-table .today {
+    background-color: #ffecb3;
+    color: #d4881f;
+    font-weight: bold;
+    border-radius: 50%;
+}
+
+/* PopUp */
+
+.popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #ffffff; /* Fondo blanco puro */
+    color: #333; /* Texto oscuro */
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25); /* Sombra más definida */
+    z-index: 1000;
+    width: 350px;
+    max-width: 90%;
+    text-align: center;
+    display: none; /* Ocultar por defecto */
+    font-family: 'Arial', sans-serif;
+    border: 2px solid #f5a623; /* Bordes destacados */
+}
+
+.popup.visible {
+    display: block; /* Mostrar cuando se agrega la clase .visible */
+}
+
+.popup-content {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+}
+
+.popup-content h2 {
+    font-size: 22px;
+    font-weight: bold;
+    margin: 0;
+    color: #f5a623; /* Color naranja destacado */
+}
+
+#selected-date {
+    font-size: 16px;
+    color: #666; /* Texto gris para destacar el título */
+    margin-bottom: 10px;
+}
+
+#event-title {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 14px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+#event-title:focus {
+    border-color: #f5a623;
+    outline: none;
+    box-shadow: 0 0 8px rgba(245, 166, 35, 0.4); /* Resaltado al enfocar */
+}
+
+label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+    color: #555;
+}
+
+#save-event {
+    background-color: #f5a623; /* Naranja destacado */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#save-event:hover {
+    background-color: #d4881f; /* Naranja más oscuro al pasar el mouse */
+    transform: scale(1.05); /* Efecto de botón "presionable" */
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: bold;
+    color: #888;
+    transition: color 0.3s ease;
+}
+
+.close-btn:hover {
+    color: #000;
+}

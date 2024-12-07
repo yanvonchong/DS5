@@ -1,0 +1,133 @@
+#tasks-container {
+    width: 100%;
+    max-width: 1100px; /* Aumentar el ancho */
+    margin: 20px auto;
+    padding: 30px;
+    background-color: #f9f9f9;
+    color: #000;
+    border-radius: 12px;
+    text-align: left;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* Sombra más pronunciada */
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Modo oscuro */
+#tasks-container.dark-mode {
+    background-color: #1e1e1e;
+    color: #fff;
+}
+
+/* Cabecera de Tareas */
+#tasks-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    flex-wrap: wrap; /* Permite que los elementos se ajusten */
+    gap: 10px;
+}
+
+#tasks-header h1 {
+    font-size: 28px; /* Aumentar tamaño del título */
+    margin: 0;
+    flex: 1; /* Toma espacio adicional si es necesario */
+}
+
+#add-task-input,
+#deadline-input {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    flex: 1; /* Expandir ambos inputs */
+    min-width: 200px; /* Tamaño mínimo */
+}
+
+#add-task-btn {
+    padding: 10px 20px;
+    background-color: #f5a623;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    flex-shrink: 0; /* Botón no se reduce */
+}
+
+#add-task-btn:hover {
+    background-color: #d4881f;
+}
+
+/* Lista de tareas */
+#tasks-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Espaciado entre tareas */
+}
+
+.task-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+    flex-wrap: wrap;
+    gap: 10px; /* Espaciado interno */
+}
+
+.task-item.completed {
+    background-color: rgba(76, 175, 80, 0.2); /* Verde claro */
+    text-decoration: line-through;
+    color: #555;
+}
+
+.task-details {
+    flex: 1; /* Detalles ocupan el espacio disponible */
+    min-width: 250px; /* Ancho mínimo */
+}
+
+.task-deadline {
+    font-size: 14px;
+    color: #666; /* Texto gris */
+    margin-top: 5px;
+}
+
+.task-actions {
+    display: flex;
+    gap: 10px;
+    flex-shrink: 0;
+}
+
+.task-actions button {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.task-actions .complete-btn {
+    background-color: #4caf50; /* Verde */
+    color: #fff;
+}
+
+.task-actions .complete-btn:hover {
+    background-color: #388e3c;
+}
+
+.task-actions .delete-btn {
+    background-color: #f44336; /* Rojo */
+    color: #fff;
+}
+
+.task-actions .delete-btn:hover {
+    background-color: #d32f2f;
+}

@@ -1,0 +1,37 @@
+<section id="calendar" class="view">
+    <h1>Calendario</h1>
+    <div id="calendar-container">
+        <div class="calendar-header">
+            <button id="prev-month" class="calendar-btn">&lt;</button>
+            <h2 id="month-year"></h2>
+            <button id="next-month" class="calendar-btn">&gt;</button>
+        </div>
+        <table id="calendar-table">
+            <thead>
+                <tr>
+                    <th>Dom</th>
+                    <th>Lun</th>
+                    <th>Mar</th>
+                    <th>Mié</th>
+                    <th>Jue</th>
+                    <th>Vie</th>
+                    <th>Sáb</th>
+                </tr>
+            </thead>
+            <tbody id="calendar-body">
+            </tbody>
+        </table>
+    </div>
+    <div id="event-popup" class="popup hidden">
+        <div class="popup-content">
+            <span id="close-popup" class="close-btn">&times;</span>
+            <h2>Agregar Evento</h2>
+            <p id="selected-date"></p>
+            <input type="text" id="event-title" placeholder="Título del evento">
+            <label>
+                <input type="checkbox" id="set-alarm"> ¿Agregar alarma?
+            </label>
+            <button id="save-event">Guardar</button>
+        </div>
+    </div>
+</section>

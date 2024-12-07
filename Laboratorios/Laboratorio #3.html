@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Problemas de Lógica en JavaScript</title>
+</head>
+<body>
+    <input type="text" id="cadena" placeholder="Ingrese una cadena">
+    <input type="number" id="numero" placeholder="Ingrese un número">
+    <input type="number" id="anio" placeholder="Ingrese un año">
+    <button onclick="resolverProblemas()">Resolver</button>
+    <div id="resultado"></div>
+
+    <script>
+        function resolverProblemas() {
+            const cadena = document.getElementById('cadena').value;
+            const numero = parseInt(document.getElementById('numero').value);
+            const anio = parseInt(document.getElementById('anio').value);
+
+            const resultadoDiv = document.getElementById('resultado');
+
+            // 1. Palíndromo de doble base
+            const esPalindromoDobleBase = (cadena) => {
+                // Convertir a número y luego a binario
+                const num = parseInt(cadena);
+                const binario = num.toString(2);
+                return cadena === cadena.split('').reverse().join('') &&
+                       binario === binario.split('').reverse().join('');
+            };
+
+            // 2. Cantidad de caracteres
+            const contarCaracteres = (cadena) => {
+                const conteo = {};
+                for (let char of cadena) {
+                    conteo[char] = (conteo[char] || 0) + 1;
+                }
+                return conteo;
+            };
+
+            // 3. Año bisiesto
+            const esBisiesto = (anio) => {
+                return (anio % 4 === 0 && anio % 100 !== 0) || anio % 400 === 0;
+            };
+
+            // 4. Sumatoria de primos
+            const sumaPrimos = (numero) => {
+                let suma = 0;
+                for (let i = 2; i <= numero; i++) {
+                    if (esPrimo(i)) {
+                        suma += i;
+                    }
+                }
+                return suma;
+            };
+
+            // Función auxiliar para determinar si un número es primo
+            const esPrimo = (num) => {
+                if (num <= 1) return false;
+                for (let i = 2; i <= Math.sqrt(num); i++) {
+                    if (num % i === 0) return false;
+                }
+                return true;
+            };
+
+            // Mostrar resultados
+            resultadoDiv.innerHTML = `
+                <p>Es palíndromo de doble base: ${esPalindromoDobleBase(cadena)}</p>
+                <p>Conteo de caracteres: ${JSON.stringify(contarCaracteres(cadena))}</p>
+                <p>Es bisiesto: ${esBisiesto(anio)}</p>
+                <p>Suma de primos: ${sumaPrimos(numero)}</p>
+            `;
+        }
+    </script>
+</body>
+</html>
